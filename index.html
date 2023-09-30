@@ -1,298 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="referrer" content="never">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>D个人网站</title>
+    <link rel="shortcut icon" href="../image/bitbug_favicon.ico" />
     <style>
-      html {
-        height: 100%;
-      }
       body {
         margin: 0;
+        height: 100vh;
+      }
+      .box1 {
         height: 100%;
         width: 100%;
-        background-color: #090909;
+        background-color: #121621;
+        background-image: url(https://z1.ax1x.com/2023/09/28/pPbU98f.jpg);
+        /* background-position: center; */
       }
-      .logo {
-        margin-top: 22px;
-        margin-left: 15px;
-        margin-right: 11px;
+      .box2 {
+        height: 100%;
+        width: 100%;
+        background-color: #e6e6e6;
+        /* background-image: url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wtc1?ver=9f09 ); */
       }
-      .daohanglan {
-        display: flex;
-        background-color: black;
-        max-width: 100%;
-      }
-      .grow-tree {
-        font-size: 30px;
-        line-height: 2.78;
-        color: aliceblue;
-      }
-      .nav {
-        float: left;
-        display: flex;
-      }
-      .nav ul li {
-        float: left;
-        list-style: none;
-      }
-      .nav ul li a:focus {
+      .font-color {
         color: white;
       }
-      .nav ul li a {
-        display: block;
-        height: 42px;
-        margin-right: 15px;
-        padding: 0 10px;
-        line-height: 53px;
-        font-size: 18px;
-        color: white;
-        text-decoration: none;
-      }
-      a {
-        text-decoration: none;
-      }
-      .nav-2 {
+      .flex {
         display: flex;
-        margin-left: 200px;
       }
-      .top-right a {
-        color: white;
-        height: 42px;
-        line-height: 81.1px;
-        font-size: 18px;
-        padding: 0 10px;
-      }
-      .li {
-        position: relative;
-        display: inline-block;
-      }
-      .dropdown {
-        display: inline-block;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: white;
-        min-width: 150px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        line-height: 1.5;
-        z-index: 99;
-      }
-      .dropdown-content a:hover {
-        background-color: #dadada;
-      }
-      .in-name {
-        color: black;
-      }
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      .shiping {
-        z-index: 1;
-      }
-      .zhuquyu {
-        height: 999px;
-      }
-      .neiron {
-        height: 500px;
-        text-align: center;
-        background-color: #090909;
-        display: flex;
+      .column {
         flex-direction: column;
       }
-      .neiron img {
-        margin-top: 100px;
-        margin-left: 50px;
+      .border-style {
+        border-bottom: 2px solid #2f3540;
+      }
+      .a {
+        color: #424040;
+        margin-right: 12px;
+      }
+      a:hover {
+        color: aqua;
+        text-decoration: none;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .neiron1 {
+        background-color: aliceblue;
+        height: 80%;
+        width: 60%;
+        border-radius: 3%;
+        margin-left: 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+      .neiron2 {
+        background-color: aliceblue;
+        height: 80%;
+        width: 60%;
+        border-radius: 3%;
+        margin-left: 20px;
+        margin-right: 20px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+      .baise {
+        background-color: white;
+      }
+      .border-ruijiao {
+        border-radius: 3%;
+      }
+      .yinyin {
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+      }
+      .li-qingdan {
+        font-size: 20px;
+      }
+      .gundontiao {
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .gundontiao::-webkit-scrollbar {
+        display: none;
+      }
+      .gundontiao-yuandao {
+        height: 2700px;
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+      .gundontiao-yuandao::-webkit-scrollbar {
+        display: none;
+      }
+      .gundontiao-yuanwang::-webkit-scrollbar {
+        display: none;
+      }
+      .daohang {
+        text-decoration: none;
+        display: block;
+        color: black;
+        background-color: white;
+        padding: 12px 20px;
+        font-size: 20px;
+        border-bottom: 2px solid #999;
+        transition: background-color 0.5s;
+      }
+      .daohang:hover {
+        background-color: #999;
+        color: white;
       }
     </style>
   </head>
   <body>
-    <div>
-      <header>
-        <!-- 顶部导航栏 -->
-        <div class="daohanglan">
-          <div>
-            <a href="https://imgse.com/i/pPIEJUK"
-              ><img
-                class="logo"
-                src="https://z1.ax1x.com/2023/09/20/pPIEJUK.png"
-                alt="GROW.AI"
-                border="0"
-                height="40px"
-                width="40px"
-            /></a>
-          </div>
-          <div class="grow-tree">GrowWB</div>
-          <div class="nav">
-            <ul class="nav-ul">
-              <li><a href="face.html">首页</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropbtn">产品介绍</a>
-                <div class="dropdown-content">
-                  <a
-                    style="color: black"
-                    href="https://baike.baidu.com/item/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E5%8A%A8%E5%91%98/27212"
-                    >WALL-E</a
-                  >
-                  <a
-                    style="color: black"
-                    href="https://shidian.baike.com/wikiid/7205817417342976037"
-                    >Chappie</a
-                  >
-                  <a
-                    style="color: black"
-                    href="https://cn.bing.com/images/search?q=eva+wall-e&id=87EB132BB014DA81A8A27A054072CA51D755EC3D&form=IQFRBA&first=1&disoverlay=1"
-                    >Eva</a
-                  >
-                  <a
-                    style="color: black"
-                    href="http://ailab.cn/20210924122376_1/"
-                    >Gitamini</a
-                  >
-                  <a
-                    style="color: black"
-                    href="https://www.sony.com.hk/reonpocket/zh/reonpocket4.jsp"
-                    >Reon Pocket 2</a
-                  >
-                  <a
-                    style="color: black"
-                    href="https://baike.baidu.com/item/T-800/7610917"
-                    >Terminator T-800</a
-                  >
-                </div>
-              </li>
-              <li class="dropdown">
-                <a href="##" class="dropbtn">关于我们</a>
-                <div class="dropdown-content">
-                  <a style="color: black" href="gongsijianjie.html"
-                    >●公司简介</a
-                  >
-                  <a style="color: black" href="qiyewhua.html">●企业文化</a>
-                  <a style="color: black" href="fazhanlic.html">●发展历程</a>
-                  <a style="color: black" href="#">●公司动态</a>
-                  <a style="color: black" href="#">●人才招聘</a>
-                  <a style="color: black" href="#">●有志青年</a>
-                </div>
-              </li>
-              <li><a href="###">合作意向</a></li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <li><a href="###">搜索</a></li>
-              <li><a href="###">登录</a></li>
-              <li><a href="###">反馈</a>
-            </li>
-            </ul>
-            
-          </div>
+    <!-- 首页 -->
+    <div
+      style="justify-content: center; align-items: center"
+      class="box1 flex column"
+    >
+      <div style="height: 500px; width: 600px">
+        <div
+          style="font-size: 40px; text-align: center; line-height: 2.7"
+          class="font-color border-style"
+        >
+          Hi
         </div>
-      </header>
-      <video muted autoplay="autoplay" loop="loop" height="100%" width="100%">
-        <source
-          class="shiping"
-          src="https://gossv.cfp.cn/videos/mts_videos/medium/VCG42N1488885040.mp4"
-          type="video/mp4"
-        />
-      </video>
-      <!-- 主区域 -->
-      <div class="zhuquyu">
-        <div style="border: solid 2px white; margin-top: 25px"></div>
+        <div style="font-size: 40px" class="font-color">“</div>
         <div
           style="
-            color: white;
-            font-size: 50px;
-            margin-top: 29px;
-            margin-left: 20px;
+            text-align: center;
+            color: #000309;
+            line-height: 2.7;
+            font-weight: 600;
           "
         >
-          <strong>Machine and people</strong>
+          <p>不积跬步，无以至千里。不积小流，无以成江海。</p>
+          <p>
+            《劝学篇》—— <em><b>荀子</b></em>
+          </p>
         </div>
-        <div class="neiron">
-          <div style="color: white">
-            <img
-              src="https://z1.ax1x.com/2023/09/23/pPTtCHP.jpg"
-              height="450px"
-            />
-            <img
-              src="https://z1.ax1x.com/2023/09/23/pPTtZcj.jpg"
-              height="450px"
-            />
-            <img
-              src="https://z1.ax1x.com/2023/09/23/pPTtuBq.jpg"
-              height="450px"
-            />
-          </div>
+        <div
+          style="font-size: 40px; text-align: end"
+          class="font-color border-style"
+        >
+          ”
+        </div>
+        <div
+          style="text-align: center; font-weight: 600; line-height: 1.7"
+          class="font-color"
+        >
+          <p>非常荣幸您能够在数以亿计的网站中点进来。</p>
+          <p>这是我的个人网站</p>
+        </div>
+        <div style="text-align: center">
+          <a
+            class="a"
+            href="https://space.bilibili.com/1227065943?spm_id_from=333.1007.0.0"
+            >bilibili</a
+          >
+          <a class="a" href="https://github.com/id-daijiyu/re01-one">GitHub</a>
+          <a class="a" href="https://weibo.com/u/7873771754">weibo</a>
+        </div>
+        <div
+          style="
+            font-size: 30px;
+            color: #164e8a;
+            text-align: center;
+            line-height: 6.7;
+            position: relative;
+          "
+        >
+          v
+        </div>
+      </div>
+    </div>
+    <!-- 内容区 -->
+    <div class="box2 flex" style="justify-content: center; align-items: center">
+      <!-- 内容左区 -->
+      <div class="flex1 neiron1">
+        <!-- 头像栏 -->
+        <div
+          style="
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #999;
+            background-color: white;
+          "
+          class="flex"
+        >
+          <img src="../image/cat.jpg" height="80px" width="80px" />
+          <div style="margin-left: 10px; font-weight: 600">凯撒大帝</div>
+        </div>
+        <!-- 导航栏 -->
+        <div class="flex1">
           <div>
-            <img
-              src="https://z1.ax1x.com/2023/09/23/pPTtQEV.jpg"
-              height="450px"
-            />
-            <img
-              src="https://z1.ax1x.com/2023/09/23/pPTtlNT.jpg"
-              height="450px"
-            />
-            <img
-              src="https://z1.ax1x.com/2023/09/23/pPTtG34.jpg"
-              height="450px"
-            />
+            <a class="daohang" href="###">导航栏</a>
+            <a class="daohang" href="###">导航栏</a>
+            <a class="daohang" href="###">导航栏</a>
+            <a class="daohang" href="###">导航栏</a>
+            <a class="daohang" href="###">导航栏</a>
           </div>
         </div>
       </div>
+      <!-- 内容中间 -->
       <div
         style="
-          height: 500px;
-          background-color: black;
-          display: flex;
-          flex-direction: column;
-          justify-content: end;
+          justify-content: center;
           align-items: center;
-          color: white;
+          background-color: rgb(255 245 245);
         "
+        class="flex2 neiron1 flex column gundontiao"
       >
-        <p>我的网站(新手娱乐)</p>
-        <a href="$$$">有情链接</a>
+        <!-- 第一层 -->
+        <div style="height: 300px; width: 800px; margin-top: 19px" class="flex">
+          <div
+            style="height: 270px; width: 300px"
+            class="baise border-ruijiao yinyin"
+          >
+            <p
+              style="
+                text-align: center;
+                font-weight: 600;
+                color: crimson;
+                font-size: 17px;
+              "
+            >
+              个人介绍
+            </p>
+            <p
+              style="
+                margin: 5px 6px;
+                line-height: 26px;
+                text-indent: 2em;
+                font-size: 16px;
+                color: #495057;
+              "
+            >
+              04年生于中国境内浙江省台州市不知名小镇。性别男，取向女，浑浑噩噩十几年，无不良嗜好，没理想，没特长，没素质的四无青年。十几年的顺水推舟,得过且过，总算让我找到个人生方向。虽然不知未来如何，是否正确。总好过宿舍游戏,视频，两点一线，天天行尸走肉吧。
+            </p>
+          </div>
+          <div
+            style="height: 270px; width: 500px; margin-left: 60px"
+            class="baise border-ruijiao yinyin flex column gundontiao-yuandao"
+          >
+            <div
+              style="
+                padding: 20px 40px;
+                justify-content: center;
+                align-items: center;
+              "
+              class="flex co"
+            >
+              <img src="../image/midlogo.png" height="80px" width="80px" />
+              <div
+                style="
+                  margin-left: 20px;
+                  font-size: 30px;
+                  font-weight: 600;
+                  color: #30cfd0;
+                "
+              >
+                关于元岛 :
+              </div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 20px;
+                  line-height: 1.7;
+                  margin: 10px 10px;
+                  color: #495057;
+                "
+              >
+                <a class="a1" href="https://kangwenchang.com/">康文昌</a
+                >，《Re01:从零开始的编程之路》作者，元岛DAO
+                社区发起人，清林云创始人，多家企业数字化顾问。<br />元岛（www.midorg.com）是一个学习型DAO
+                社区，有永久免费的新时代课程和团结互助的社群。
+                你可以将元岛视为在线大学，有课程，有小组，有班级，有社团，等等。
+                你可以将元岛视为游戏，写作业和参与活动都能获得经验值或积分，等级高的同学不仅能登上榜单，更能获得实际奖励。
+                你可以将元岛视为无边界公司，可以自行或和他人合作进行商业项目。
+                你也可以将元岛视为社区，这里都是一些团结友爱、热爱学习和积极向上的小伙伴，认识大家扩展你的生活边界。
+                看过几百节的编程课，没多久就放弃了。该说不说康老师这个视频做的确实可以，看一天视频看的我腰累脖子酸。不说了，上<a
+                  class="a1"
+                  href="https://www.bilibili.com/video/BV1AF411s78P/?spm_id_from=333.999.0.0"
+                  >b站</a
+                >了。
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 第二层 -->
+        <div class="flex1">
+          <div
+            style="
+              width: 800px;
+              height: 270px;
+              margin-top: 17px;
+              height: 300px;
+              overflow-x: hidden;
+              overflow-y: auto;
+              background-image: linear-gradient(
+                to top,
+                #96fbc4 0%,
+                #f9f586 100%
+              );
+              line-height: 1.9;
+            "
+            class="baise gundontiao-yuanwang"
+          >
+            <div
+              style="
+                text-align: center;
+                font-size: 30px;
+                border-bottom: 2px solid;
+                padding: 2px;
+                margin: 0px 14px;
+                color: #999;
+              "
+            >
+              <p style="color: #4b06f7; font-weight: 600">人生101目标清单</p>
+            </div>
+            <div>
+              <ul class="li-qingdan">
+                <li><div>健身。身体是革命的本钱。</div></li>
+                <li><div>学习技术，立足社会。</div></li>
+                <li><div>经济独立，有一定的积蓄。</div></li>
+                <li><div>买一台最新款手机。</div></li>
+                <li><div>买一辆方正的小汽车。</div></li>
+                <li><div>养一只小狗或小猫。</div></li>
+                <li><div>去看大海和沙滩。</div></li>
+                <li><div>吃遍全中国的小吃。</div></li>
+                <li><div>去各个城市旅游。</div></li>
+                <li><div>暂定。</div></li>
+                <li><div>暂定。</div></li>
+                <li><div>暂定。</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="border: 12px solid black; margin-top: 10px"></div>
-      <div style="border: 10px solid white; margin-top: 10px"></div>
-      <div style="border: 8px solid black; margin-top: 10px"></div>
-      <div style="border: 9px solid white; margin-top: 10px"></div>
-      <div style="border: 6px solid black; margin-top: 10px"></div>
-      <div style="border: 8px solid white; margin-top: 10px"></div>
-      <div style="border: 4px solid black; margin-top: 10px"></div>
-      <div style="border: 7px solid white; margin-top: 10px"></div>
-      <div style="border: 2px solid black; margin-top: 10px"></div>
-      <div style="border: 7px solid white; margin-top: 10px"></div>
-      <div style="border: 1px solid black; margin-top: 10px"></div>
-      <div style="border: 6px solid white; margin-top: 10px"></div>
-      <div style="border: 0.8px solid black; margin-top: 10px"></div>
-      <div style="border: 5px solid white; margin-top: 10px"></div>
-      <div style="border: 0.6px solid black; margin-top: 10px"></div>
-      <div style="border: 4px solid white; margin-top: 10px"></div>
-      <div style="border: 0.4px solid black; margin-top: 10px"></div>
-      <div style="border: 3px solid white; margin-top: 10px"></div>
-      <div style="border: 0.2px solid black; margin-top: 10px"></div>
-      <div style="border: 2px solid white; margin-top: 10px"></div>
-      <div style="border: 0.1px solid black; margin-top: 10px"></div>
-      <div style="border: 1px solid white; margin-top: 10px"></div>
+      <!-- 内容右区 -->
+      <div class="flex1 neiron2"></div>
     </div>
+    <!-- 底部栏 -->
+    <footer>
+      <div
+        style="
+          height: 80px;
+          justify-content: center;
+          align-items: center;
+          color: #57595c;
+          background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+        "
+        class="flex"
+      >
+        2023 © <em>daiJiYu 个人网站</em>
+      </div>
+    </footer>
   </body>
 </html>
