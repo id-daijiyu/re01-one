@@ -14,7 +14,7 @@
         height: 100%;
         width: 100%;
         background-color: #121621;
-        background-image: url(https://z1.ax1x.com/2023/09/28/pPbU98f.jpg);
+/*         background-image: url(https://z1.ax1x.com/2023/09/28/pPbU98f.jpg); */
         /* background-position: center; */
       }
       .box2 {
@@ -36,7 +36,7 @@
         border-bottom: 2px solid #2f3540;
       }
       .a {
-        color: #424040;
+        color: #d7dddd5b;
         margin-right: 12px;
       }
       a:hover {
@@ -110,6 +110,22 @@
         background-color: #999;
         color: white;
       }
+      .donhua {
+        animation-duration: 3s;
+        animation-name: slidein;
+      }
+
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -129,10 +145,12 @@
         <div
           style="
             text-align: center;
-            color: #000309;
+            color: rgb(161, 157, 157);
             line-height: 2.7;
+            font-size: 20px;
             font-weight: 600;
           "
+          class="donhua"
         >
           <p>不积跬步，无以至千里。不积小流，无以成江海。</p>
           <p>
