@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>个人网站</title>
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/id-daijiyu/re01-one/main/bitbug_favicon%20(1).ico" />
+    <title>D个人网站</title>
+    <link rel="shortcut icon" href="../image/bitbug_favicon.ico" />
     <style>
       body {
         margin: 0;
         height: 100vh;
+        background-color: #050d4d;
       }
       .box1 {
         height: 100%;
         width: 100%;
         background-color: #121621;
-/*         background-image: url(https://z1.ax1x.com/2023/09/28/pPbU98f.jpg); */
+        /* background-image: url(https://z1.ax1x.com/2023/09/28/pPbU98f.jpg); */
         /* background-position: center; */
       }
       .box2 {
@@ -129,6 +130,134 @@
           width: 100%;
         }
       }
+      .log-weixin{
+        margin-right: 20px;
+      }
+      .log-qq{
+        margin-right: 20px;
+      }
+
+      .border {
+        border-radius: 20px;
+      }
+      .dibulan {
+        height: 130px;
+        width: 100%;
+        background-color: #64e09a;
+      }
+      .daohanglan {
+        text-decoration: none;
+        color: #495057;
+        font-size: 20px;
+        display: block;
+        border-bottom: 2px solid black;
+        padding: 12px 20px;
+        transition: background-color 0.5s;
+      }
+      .daohanglan:hover {
+        background-color: #999494;
+        color: white;
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+        border-top: 2px solid #dab2fa;
+      }
+      .youqu {
+        background-color: #dab2fa;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      .dibulan-xinxi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        color: #495057;
+      }
+      .tubiao {
+        margin-left: 20px;
+        margin-top: 7px;
+      }
+      .tubiao:hover {
+        opacity: 0.7;
+      }
+      .yuandao {
+        height: 300px;
+        width: 60%;
+        background-color: white;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          rgb(51, 51, 51) 0px 0px 0px 3px;
+      }
+      /* 隐藏滚动条 */
+      .yuandao::-webkit-scrollbar {
+        display: none;
+      }
+      .yuandao-neiron {
+        font-size: 20px;
+        padding: 12px 10px;
+        line-height: 1.7;
+        color: #495057;
+      }
+      .jieshao {
+        height: 300px;
+        width: 30%;
+        background-color: #4fc9bd;
+        overflow: auto;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          rgb(51, 51, 51) 0px 0px 0px 3px;
+      }
+      /* 隐藏滚动条 */
+      .jieshao::-webkit-scrollbar {
+        display: none;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .yuandao-lianjie {
+        color: rgb(39, 6, 247);
+        text-decoration: none;
+      }
+      .yuandao-lianjie:hover {
+        color: white;
+        border: 2px solid rgb(114, 110, 110);
+        background-color: #446f99;
+      }
+      .yuandao-tupian:after {
+        content: "";
+        display: inline-block;
+        background: url("https://z1.ax1x.com/2023/10/11/piSClsP.png");
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+      }
+      .kangwenchang {
+        text-decoration: none;
+        color: #0825ff;
+      }
+      .kangwenchang:hover {
+        color: white;
+        border: 2px solid rgb(114, 110, 110);
+        background-color: #446f99;
+      }
+      .shengmin:hover {
+        border-bottom: 1px solid black;
+      }
+      @media (max-width: 600px) {
+        .youqu {
+          display: none;
+        }
+        .zuoshangqu {
+          flex-direction: column;
+        }
+        .jieshao {
+          margin-top: 15px;
+          width: 100%;
+        }
+        .yuandao {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -137,7 +266,7 @@
       style="justify-content: center; align-items: center"
       class="box1 flex column"
     >
-      <div style="height: 500px; width: 600px">
+      <div style="height: 500px;">
         <div
           style="font-size: 40px; text-align: center; line-height: 2.7"
           class="font-color border-style"
@@ -149,8 +278,8 @@
           style="
             text-align: center;
             color: rgb(161, 157, 157);
-            line-height: 2.7;
             font-size: 20px;
+            line-height: 2.7;
             font-weight: 600;
           "
           class="donhua"
@@ -174,7 +303,6 @@
           <p>这是我的个人网站</p>
         </div>
         <div style="text-align: center">
-          <a class="a" href="https://www.tanxianri.com/%E9%82%AE%E7%AE%B1.html">WeChat</a>
           <a
             class="a"
             href="https://space.bilibili.com/1227065943?spm_id_from=333.1007.0.0"
@@ -183,202 +311,158 @@
           <a class="a" href="https://github.com/id-daijiyu/re01-one">GitHub</a>
           <a class="a" href="https://weibo.com/u/7873771754">weibo</a>
         </div>
-        <div
-          style="
-            font-size: 30px;
-            color: #164e8a;
-            text-align: center;
-            line-height: 6.7;
-            position: relative;
-          "
-        >
-         <a class="ins-style"  href="#ins">v</a>
-        </div>
+
       </div>
     </div>
     <!-- 内容区 -->
-    <div id="ins" class="box2 flex" style="justify-content: center; align-items: center">
-      <!-- 内容左区 -->
-      <div class="flex1 neiron1">
-        <!-- 头像栏 -->
+    <div style="justify-content: center; margin-top: 20px; background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);" class="flex">
+      <div style="height: 800px; width: 90%" class="flex">
+        <!-- 左区 -->
         <div
-          style="
-            padding: 10px;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid #999;
-            background-color: white;
-          "
-          class="flex"
+          style="flex: 3; justify-content: center; align-items: center"
+          class="flex column border"
         >
-          <img src="https://z1.ax1x.com/2023/09/30/pPqDvKP.jpg" alt="touxiang" height="80px" width="80px" />
-          <div style="margin-left: 10px; font-weight: 600">凯撒大帝</div>
-        </div>
-        <!-- 导航栏 -->
-        <div class="flex1">
-          <div>
-            <a class="daohang" href="https://www.tanxianri.com/blog.html">个人博客</a>
-            <a class="daohang" href="###">导航栏</a>
-            <a class="daohang" href="###">导航栏</a>
-            <a class="daohang" href="###">导航栏</a>
-            <a class="daohang" href="###">导航栏</a>
-          </div>
-        </div>
-      </div>
-      <!-- 内容中间 -->
-      <div
-        style="
-          justify-content: center;
-          align-items: center;
-          background-color: rgb(255 245 245);
-        "
-        class="flex2 neiron1 flex column gundontiao"
-      >
-        <!-- 第一层 -->
-        <div style="height: 300px; width: 800px; margin-top: 19px" class="flex">
+          <!-- 左上区 -->
           <div
-            style="height: 270px; width: 300px"
-            class="baise border-ruijiao yinyin"
+            style="height: 300px; width: 90%; justify-content: space-between"
+            class="flex zuoshangqu"
           >
-            <p
-              style="
-                text-align: center;
-                font-weight: 600;
-                color: crimson;
-                font-size: 17px;
-              "
-            >
-              个人介绍
-            </p>
-            <p
-              style="
-                margin: 5px 6px;
-                line-height: 26px;
-                text-indent: 2em;
-                font-size: 16px;
-                color: #495057;
-              "
-            >
-              04年生于中国境内浙江省台州市不知名小镇。性别男，取向女，浑浑噩噩十几年，无不良嗜好，没理想，没特长，没素质的四无青年。十几年的顺水推舟,得过且过，总算让我找到个人生方向。虽然不知未来如何，是否正确。总好过宿舍游戏,视频，两点一线，天天行尸走肉吧。
-            </p>
-          </div>
-          <div
-            style="height: 270px; width: 500px; margin-left: 60px"
-            class="baise border-ruijiao yinyin flex column gundontiao-yuandao"
-          >
-            <div
-              style="
-                padding: 20px 40px;
-                justify-content: center;
-                align-items: center;
-              "
-              class="flex co"
-            >
-              <img src="https://z1.ax1x.com/2023/10/03/pPOSP4f.png" alt="yuandao" height="80px" width="80px" />
-              <div
-                style="
-                  margin-left: 20px;
-                  font-size: 30px;
-                  font-weight: 600;
-                  color: #30cfd0;
-                "
-              >
-                关于元岛 :
-              </div>
-            </div>
-            <div>
-              <p
-                style="
-                  font-size: 20px;
-                  line-height: 1.7;
-                  margin: 10px 10px;
-                  color: #495057;
-                "
-              >
-                <a class="a1" href="https://kangwenchang.com/">康文昌</a
-                >，《Re01:从零开始的编程之路》作者，元岛DAO
-                社区发起人，清林云创始人，多家企业数字化顾问。<br />元岛（www.midorg.com）是一个学习型DAO
-                社区，有永久免费的新时代课程和团结互助的社群。
+            <!-- 元岛 -->
+            <div class="border yuandao">
+              <div class="yuandao-neiron">
+                <b class="yuandao-tupian">推荐学习途径:</b>
+                <a
+                  class="yuandao-lianjie"
+                  target="_blank"
+                  href="https://www.midorg.com/"
+                  >元岛</a
+                >是一个学习型DAO (分布式自治组织) 社区。发起人：<a
+                  target="_blank"
+                  class="kangwenchang"
+                  href="https://kangwenchang.com/"
+                  >"康文昌"</a
+                >
+                《Re01:从零开始的编程之路》作者，元岛社区发起人，清林云创始人。
+                元岛有永久免费的新时代课程和团结互助的社群。
                 你可以将元岛视为在线大学，有课程，有小组，有班级，有社团，等等。
                 你可以将元岛视为游戏，写作业和参与活动都能获得经验值或积分，等级高的同学不仅能登上榜单，更能获得实际奖励。
                 你可以将元岛视为无边界公司，可以自行或和他人合作进行商业项目。
                 你也可以将元岛视为社区，这里都是一些团结友爱、热爱学习和积极向上的小伙伴，认识大家扩展你的生活边界。
-                看过几百节的编程课，没多久就放弃了。该说不说康老师这个视频做的确实可以，看一天视频看的我腰累脖子酸。不说了，上<a
-                  class="a1"
-                  href="https://www.bilibili.com/video/BV1AF411s78P/?spm_id_from=333.999.0.0"
-                  >b站</a
-                >了。
+              </div>
+            </div>
+            <!-- 介绍 -->
+            <div class="border jieshao">
+              <p style="text-align: center; font-size: 25px; color: #df246f">
+                介绍
               </p>
+              <div style="font-size: 20px; padding: 8px 10px; color: #495057">
+                一位卑微的杂耍老手，在命运的变迁下同时扮演着受害者与加害者的双重角色。所带的这面具不仅仅是虚荣的装饰，更是现已消逝的人民心声的残像。然而，我对于过往那些心中的怒火的无畏探索现在依然栩栩如生，我发誓我要铲除那些肮脏的毒虫，它们是作恶的先锋，更袒护着那些残暴贪婪的违背人民意志的行为。对于那些毒虫的裁决只有复仇，而那带有还愿性的复仇是不会徒劳的，因为它的价值和真实性终有一天会证明那些警醒者和高尚者​​是正确的。说实在的，我那乱七八糟奶油浓汤般的措辞无疑显得冗长累赘，所以，最后请允许我简单的补充一句，非常荣幸遇见您。
+                <p style="font-size: 25px; color: red">曾获荣誉:</p>
+                <ul>
+                  <li>
+                    2022年国际<a
+                      target="_blank"
+                      style="text-decoration: none"
+                      href="https://baike.baidu.com/item/%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%A5%96%E6%9D%AF"
+                      >奥林匹克奖杯</a
+                    >获得者。
+                  </li>
+                  <li>
+                    美国<a
+                      target="_blank"
+                      style="text-decoration: none"
+                      href="https://baike.baidu.com/item/%E6%97%B6%E4%BB%A3/1944848"
+                      >《时代周刊》</a
+                    >2006年度风云人物之一。
+                  </li>
+                  <li>
+                    也获得过2008年<a
+                      target="_blank"
+                      style="text-decoration: none"
+                      href="https://news.cctv.com/special/zhibo/gandongbanjiang/index.shtml#:~:text=%E6%84%9F%E5%8A%A8%E4%B8%AD%E5%9B%BD2008%E5%B9%B4%E5%BA%A6%E4%BA%BA%E7%89%A9%20%3E%3E%3E%E7%89%B9%E5%88%AB%E5%A5%96%E2%80%94%E2%80%94%E5%85%A8%E4%BD%93%E2%80%9C%E4%B8%AD%E5%9B%BD%E4%BA%BA%E2%80%9D,%E5%8D%81%E4%B8%89%E5%86%9C%E6%B0%91%E5%85%84%E5%BC%9F%EF%BC%9A%E5%A4%A7%E7%88%B1%E8%87%B3%E6%9C%B4%20%E6%9D%8E%E6%A1%82%E6%9E%97%20%E9%99%86%E5%BB%BA%E8%8A%AC%EF%BC%9A%E7%83%9B%E7%85%A7%E6%B7%B1%E5%B1%B1"
+                      >感动中国</a
+                    >的特别奖。
+                  </li>
+                  <li>特级退堂鼓表演艺术家。</li>
+                  <li>夜宵外卖一级品鉴赏师。</li>
+                  <li>著名电影电视剧观众。</li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- 第二层 -->
-        <div class="flex1">
+          <!-- 左下区 -->
           <div
             style="
-              width: 800px;
-              height: 270px;
-              margin-top: 17px;
-              height: 300px;
-              overflow-x: hidden;
-              overflow-y: auto;
-              background-image: linear-gradient(
-                to top,
-                #96fbc4 0%,
-                #f9f586 100%
-              );
-              line-height: 1.9;
+              height: 400px;
+              width: 95%;
+              margin-top: 40px;
+              background-color: #df246f;
+              justify-content: center;
+              align-items: center;
+              box-shadow: blue 0px 0px 0px 2px inset,
+                rgb(255, 255, 255) 10px -10px 0px -3px,
+                rgb(31, 193, 27) 10px -10px,
+                rgb(255, 255, 255) 20px -20px 0px -3px,
+                rgb(255, 217, 19) 20px -20px,
+                rgb(255, 255, 255) 30px -30px 0px -3px,
+                rgb(255, 156, 85) 30px -30px,
+                rgb(255, 255, 255) 40px -40px 0px -3px,
+                rgb(255, 85, 85) 40px -40px;
+              /* z-index: -1; */
             "
-            class="baise gundontiao-yuanwang"
+            class="border flex column"
           >
             <div
               style="
                 text-align: center;
                 font-size: 30px;
-                border-bottom: 2px solid;
-                padding: 2px;
-                margin: 0px 14px;
-                color: #999;
+                border-bottom: 2px solid #65696d;
+                width: 80%;
+                height: 60px;
+                margin-top: 12px;
               "
+              class="yinyin"
             >
-              <p style="color: #4b06f7; font-weight: 600">人生101目标清单</p>
+              愿望清单
             </div>
-            <div>
-              <ul class="li-qingdan">
-                <li><div>健身。身体是革命的本钱。</div></li>
-                <li><div>学习技术，立足社会。</div></li>
-                <li><div>经济独立，有一定的积蓄。</div></li>
-                <li><div>买一台最新款手机。</div></li>
-                <li><div>买一辆方正的小汽车。</div></li>
-                <li><div>养一只小狗或小猫。</div></li>
-                <li><div>去看大海和沙滩。</div></li>
-                <li><div>吃遍全中国的小吃。</div></li>
-                <li><div>去各个城市旅游。</div></li>
-                <li><div>暂定。</div></li>
-                <li><div>暂定。</div></li>
-                <li><div>暂定。</div></li>
+            <div style="height: 90%; width: 95%; overflow: auto">
+              <ul style="font-size: 20px; color: #Ffd700; line-height: 1.7">
+                <li>拥有一副强健的体魄和金刚不坏的肾</li>
+                <li>保持学习的态度,不断进步和提升自我</li>
+                <li>精通一门技术，足以立足社会</li>
+                <li>经济独立，有一定的积蓄</li>
+                <li>学会开车，考过驾照</li>
+                <li>买一台趁手的手机</li>
+                <li>参加一次旅行,感受不同的文化和风景</li>
+                <li>学习摄影,用镜头记录下生活中的美好时光</li>
+                <li>学习一门乐器,提高我的音乐素养</li>
+                <li>旅游和学习相结合,提高自己的综合素质</li>
+                <li>每天吃一个苹果，提高身体强度</li>
+                <li>养一只猫或狗</li>
+                <li>走遍各个城市，吃遍各处小吃</li>
+                <li>暂定.....</li>
               </ul>
+              <p style="font-size: 20px; color:495057">
+                只有一件事会使人疲劳——摇摆不定和优柔寡断。<br />而每做一件事，都会使人身心解放，即使把事情办坏了，也比什么都不做强。
+              </p>
             </div>
           </div>
         </div>
+        <!-- 右区 -->
+        <div id="" style="flex: 1; margin-left: 12px" class="baise youqu">
+          <!-- 导航栏 -->
+          <div>
+            <a class="daohanglan" href="###">导航栏</a>
+            <a class="daohanglan" href="###">导航栏</a>
+            <a class="daohanglan" href="###">导航栏</a>
+            <a class="daohanglan" href="###">导航栏</a>
+            <a class="daohanglan" href="###">导航栏</a>
+            <a class="daohanglan" href="###">导航栏</a>
+          </div>
+          <!-- 右区下边 -->
+          <div></div>
+        </div>
       </div>
-      <!-- 内容右区 -->
-      <div class="flex1 neiron2"></div>
     </div>
-    <!-- 底部栏 -->
-    <footer>
-      <div
-        style="
-          height: 80px;
-          justify-content: center;
-          align-items: center;
-          color: #57595c;
-          background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-        "
-        class="flex"
-      >
-        2023 © <em>daiJiYu 个人网站</em>
-      </div>
-    </footer>
   </body>
 </html>
