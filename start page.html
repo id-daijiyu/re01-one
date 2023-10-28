@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>当天要事v1</title>
+    <meta
+      name="description"
+      content="记录和提醒当前最重要的事，可以设置为浏览器起始页tab"
+    />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url(../images/望月.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        position: relative;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #shuRuKuang {
+        border: 0;
+        border-bottom: 2px solid #f1e905;
+        padding: 4px 2px;
+        display: block;
+        background: 0;
+        line-height: 1.5;
+        outline: none;
+        text-align: center;
+        transition: border-color 0.2s ease-in-out;
+        border: radius 0;
+        color: #b52037;
+        font-size: 2rem;
+        max-width: 98%;
+      }
+      #anNiu {
+        margin-left: -50px;
+        margin-right: 10px;
+        color: #ccc;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+      }
+      input::placeholder {
+        color: #ccc;
+      }
+      input::-webkit-input-placeholder {
+        color: #dfdddd;
+      }
+      .time {
+        font-size: 70px;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="time"></div>
+    <div class="box">
+      <input placeholder="最重要的事？" id="shuRuKuang" />
+      <span id="anNiu" onclick="change()">√</span>
+    </div>
+
+    <script>
+      let youShi = false;
+
+      function change() {
+        let anNiu = document.getElementById("anNiu");
+        let shuRuKuang = document.getElementById("shuRuKuang");
+
+        if (youShi) {
+          youShi = false;
+          anNiu.innerHTML = "√";
+          shuRuKuang.style.borderBottomColor = "#fff";
+          shuRuKuang.value = "";
+          shuRuKuang.readOnly = false;
+          window.localStorage.removeItem("shi");
+
+          // fetch("http://localhost:3000/", {
+          //   method: "DELETE",
+          // })
+          //   .then((res) => res.json())
+          //   .then((data) => {
+          //     console.log(data);
+          //   });
+        } else {
+          youShi = true;
+          anNiu.innerHTML = "×";
+          shuRuKuang.style.borderBottomColor = "transparent";
+          shuRuKuang.readOnly = true;
+          window.localStorage.setItem("shi", shuRuKuang.value);
+          alert("种一棵树最好的时间是十年前，其次是现在。加油！！少年！！");
+
+          // fetch("http://localhost:3000/" + shuRuKuang.value, {
+          //   method: "POST",
+          // })
+          //   .then((res) => res.json())
+          //   .then((data) => {
+          //     console.log(data);
+          //   });
+        }
+      }
+
+      // fatch("http://localhost:3000/", {
+      //   method: "GET",
+      // })
+      //   .then((response) => response.json())
+      //   .then((jsonData) => {
+      //     console.log(jsonData);
+      //     if (jsonData.data) {
+      //       document.getElementById("shuRuKuang").value = jsonData.data;
+      //       youShi = true;
+      //       anNiu.innerText = "×";
+      //       shuRuKuang.style.borderBottomColor = "transparent";
+      //       shuRuKuang.readOnly = true;
+      //     }
+      //   });
+
+      let data = window.localStorage.getItem("shi");
+      if (data) {
+        document.getElementById("shuRuKuang").value = data;
+        change();
+      }
+
+      function getTime() {
+        var date = new Date();
+        var hour = date.getHours(); //获取小时
+        hour = hour < 10 ? "0" + hour : hour;
+        var minute = date.getMinutes(); // 获取分
+        minute = minute < 10 ? "0" + minute : minute;
+        var seconds = date.getSeconds(); //获取秒
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        return hour + ":" + minute + ":" + seconds;
+      }
+
+      setInterval(function () {
+        document.querySelector(".time").innerHTML = getTime();
+      }, 1000);
+    </script>
+  </body>
+</html>
