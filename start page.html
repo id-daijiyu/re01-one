@@ -65,16 +65,176 @@
         position: absolute;
         top: 30px;
       }
+      .search {
+        height: 40px;
+        width: 400px;
+        position: relative;
+        top: -150px;
+      }
+      .kuaijie {
+        height: 70px;
+        width: 400px;
+        position: absolute;
+        top: 50px;
+        display: flex;
+        margin: 12px 12px;
+      }
+      .bujian {
+        height: 70px;
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 8px;
+      }
+      .tubiao {
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+      }
+      div.search form {
+        width: 100%;
+        height: 100%;
+      }
+
+      div.search form input:nth-child(2) {
+        width: 400px;
+        height: 100%;
+        font-size: 16px;
+        text-indent: 40px;
+        border: none;
+        float: left;
+        border-radius: 20px;
+      }
+
+      .img {
+        position: absolute;
+        transform: translateX(-250px);
+        height: 20px;
+        left: 264px;
+        top: 11px;
+      }
+      .baise {
+      }
     </style>
   </head>
   <body>
     <div class="time"></div>
+    <div class="search">
+      <form action="https://www.baidu.com/s" target="_blank" method="get">
+        <img class="img" src="../images/搜索.png" alt="" />
+        <input
+          class="text"
+          type="text"
+          name="condition"
+          placeholder="搜索网页"
+        />
+        <a href="#" class="se"></a>
+      </form>
+      <div class="kuaijie">
+        <div class="bujian">
+          <div class="tubiao">
+            <a href="https://github.com/" target="_blank"
+              ><img
+                src="../images/GitHub.png"
+                width="35px"
+                height="35px"
+                alt="GitHub"
+            /></a>
+          </div>
+          <div class="">GitHub</div>
+        </div>
+
+        <div class="bujian">
+          <div class="tubiao">
+            <a href="https://www.w3cschool.cn/" target="_blank"
+              ><img
+                src="../images/w3c.png"
+                width="35px"
+                height="35px"
+                alt="GitHub"
+            /></a>
+          </div>
+          <div>W3C</div>
+        </div>
+
+        <div class="bujian">
+          <div class="tubiao">
+            <a href="https://developer.mozilla.org/zh-CN/" target="_blank"
+              ><img
+                src="../images/th.png"
+                width="35px"
+                height="35px"
+                alt="GitHub"
+            /></a>
+          </div>
+          <div>MDN</div>
+        </div>
+
+        <div class="bujian">
+          <div class="tubiao">
+            <a href="https://www.bilibili.com/" target="_blank"
+              ><img
+                src="../images/bilibili-01.png"
+                width="38px"
+                height="38px"
+                alt="GitHub"
+            /></a>
+          </div>
+          <div>bilibili</div>
+        </div>
+
+        <div class="bujian">
+          <div class="tubiao">
+            <a href="https://www.runoob.com/" target="_blank"
+              ><img
+                src="../images/cainiao.png"
+                width="38px"
+                height="38px"
+                alt="GitHub"
+            /></a>
+          </div>
+          <div>菜鸟</div>
+        </div>
+
+        <div class="bujian">
+          <div class="tubiao">
+            <a href="https://www.csdn.net/" target="_blank"
+              ><img
+                src="../images/CSDN.png"
+                width="38px"
+                height="38px"
+                alt="GitHub"
+            /></a>
+          </div>
+          <div>CSDN</div>
+        </div>
+      </div>
+    </div>
     <div class="box">
       <input placeholder="最重要的事？" id="shuRuKuang" />
       <span id="anNiu" onclick="change()">√</span>
     </div>
 
     <script>
+      let text = document.querySelector(".text");
+      let sear = document.querySelector(".se");
+      function search() {
+        let textcontent = text.value;
+        location.href = "https://www.baidu.com/s?wd=" + textcontent;
+      }
+    //   监听键盘事件，单击回车执行函数
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 13) {
+          search()
+        }
+      });
+
       let youShi = false;
 
       function change() {
