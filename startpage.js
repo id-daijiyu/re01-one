@@ -17,22 +17,40 @@ setInterval(changeBackground, 30000); // 每两分钟切换一次背景图片（
 
 // ！！！！！！！！！！！搜索框跳转！！！！！！！！！！！！！！！！！
 // ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
-let text = document.querySelector(".text");
-let sear = document.querySelector(".se");
-function search() {
-  let textcontent = text.value;
-  // 在当前页面跳转
-  // location.href = "https://www.baidu.com/s?wd=" + textcontent;
 
-  // 打开一个新的窗口，跳转
-  window.open("https://www.baidu.com/s?wd=" + textcontent, "newWindow");
-}
-//   监听键盘事件，单击回车执行函数
-document.addEventListener("keydown", function (event) {
-  if (event.keyCode === 13) {
-    search();
+function handleKeyPress(event) {
+  if (event.key === "Enter") {
+    searchWithBing();
   }
-});
+}
+
+function searchWithBing() {
+  var searchQuery = document.getElementById("searchInput").value;
+  var bingUrl =
+    "https://www.bing.com/search?q=" + encodeURIComponent(searchQuery);
+  window.location.href = bingUrl;
+}
+
+// ！！！！！！！！！！！《《废弃》》！！！！！！！！！！
+// ！！！！！！！！！！！《《废弃》》！！！！！！！！！！
+// let text = document.querySelector(".text");
+// let sear = document.querySelector(".se");
+// function search() {
+//   let textcontent = text.value;
+//   // 在当前页面跳转
+//   // location.href = "https://www.baidu.com/s?wd=" + textcontent;
+
+//   // 打开一个新的窗口，跳转
+//   window.open("https://www.baidu.com/s?wd=" + textcontent, "newWindow");
+// }
+// //   监听键盘事件，单击回车执行函数
+// document.addEventListener("keydown", function (event) {
+//   if (event.keyCode === 13) {
+//     search();
+//   }
+// });
+// ！！！！！！！！！！！《《废弃》》！！！！！！！！！！
+// ！！！！！！！！！！！《《废弃》》！！！！！！！！！！
 
 // ！！！！！！！！！当前要事！！！！！！！！！！！！！！！！！！
 // ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
