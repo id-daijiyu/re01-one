@@ -108,7 +108,7 @@
       color: white;
     }
 
-    .text {
+    #searchInput {
       opacity: 0.7;
     }
 
@@ -158,10 +158,10 @@
 <body>
   <div class="time"></div>
   <div class="search">
-    <form action="https://www.baidu.com/s" target="_blank" method="get">
+    <form onsubmit="return false;">
       <img class="img" src="../images/搜索.png" alt="" />
-      <input class="text" type="text" name="condition" placeholder="搜索网页" autofocus />
-      <a href="#" class="se"></a>
+      <input type="text" id="searchInput" placeholder="在必应中搜索..." onkeypress="handleKeyPress(event)" />
+      <!-- <a href="#" class="se"></a> -->
     </form>
 
     <div class="kuaijie">
