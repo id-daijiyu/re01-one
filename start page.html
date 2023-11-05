@@ -1,326 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>祝你有美好的一天</title>
-    <link rel="icon" href="../images/栀子花.ico" sizes="16x16">
-    <meta
-      name="description"
-      content="记录和提醒当前最重要的事，可以设置为浏览器起始页tab"
-    />
-    <style>
-      body {
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background-image: url(../images/pink-girl.png);
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        flex-direction: column;
-        position: relative;
-      }
-      .box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      #shuRuKuang {
-        border: 0;
-        border-bottom: 2px solid #f1e905;
-        padding: 4px 2px;
-        display: block;
-        background: 0;
-        line-height: 1.5;
-        outline: none;
-        text-align: center;
-        transition: border-color 0.2s ease-in-out;
-        border: radius 0;
-        color: #b52037;
-        font-size: 2rem;
-        max-width: 98%;
-      }
-      #anNiu {
-        margin-left: -50px;
-        margin-right: 10px;
-        color: #ccc;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        text-align: center;
-        line-height: 30px;
-        cursor: pointer;
-      }
-      input::placeholder {
-        color: #ccc;
-      }
-      input::-webkit-input-placeholder {
-        color: #dfdddd;
-      }
-      .time {
-        font-size: 70px;
-        color: rgb(0, 0, 0);
-        position: absolute;
-        top: 30px;
-      }
-      .search {
-        height: 40px;
-        width: 400px;
-        position: relative;
-        top: -150px;
-      }
-      .kuaijie {
-        height: 70px;
-        width: 400px;
-        position: absolute;
-        top: 50px;
-        display: flex;
-        margin: 12px 12px;
-      }
-      .bujian {
-        height: 70px;
-        width: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 8px;
-      }
-      .tubiao {
-        width: 50px;
-        height: 50px;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-      }
-      .tubiao:hover{
-        background-color: #ccc;
-      }
-      div.search form {
-        width: 100%;
-        height: 100%;
-      }
 
-      div.search form input:nth-child(2) {
-        width: 400px;
-        height: 100%;
-        font-size: 16px;
-        text-indent: 40px;
-        border: none;
-        float: left;
-        border-radius: 20px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>栀子花</title>
+  <script src="./startpage.js"></script>
+  <link rel="icon" href="../images/栀子花.ico" sizes="16x16">
+  <meta name="description" content="记录和提醒当前最重要的事，可以设置为浏览器起始页tab" />
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url(../images/pink-girl.png);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      flex-direction: column;
+      position: relative;
+      transition: background 1s;
+    }
 
-      .img {
-        position: absolute;
-        transform: translateX(-250px);
-        height: 20px;
-        left: 264px;
-        top: 11px;
-      }
-      .text{
-        opacity: 0.79;
-      }
-      .img{
-        filter: brightness(20%)
-      }
-    </style>
-  </head>
-  <body>
-    <div class="time"></div>
-    <div class="search">
-      <form action="https://www.baidu.com/s" target="_blank" method="get">
-        <img class="img" src="../images/搜索.png" alt="" />
-        <input
-          class="text"
-          type="text"
-          name="condition"
-          placeholder="搜索网页"
-        />
-        <a href="#" class="se"></a>
-      </form>
-      <div class="kuaijie">
-        <div class="bujian">
-          <div class="tubiao">
-            <a href="https://github.com/" target="_blank"
-              ><img
-                src="../images/GitHub.png"
-                width="35px"
-                height="35px"
-                alt="GitHub"
-            /></a>
-          </div>
-          <div class="">GitHub</div>
-        </div>
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        <div class="bujian">
-          <div class="tubiao">
-            <a href="https://www.w3cschool.cn/" target="_blank"
-              ><img
-                src="../images/w3c.png"
-                width="35px"
-                height="35px"
-                alt="GitHub"
-            /></a>
-          </div>
-          <div>W3C</div>
-        </div>
+    #shuRuKuang {
+      border: 0;
+      border-bottom: 2px solid #f1e905;
+      padding: 4px 2px;
+      display: block;
+      background: 0;
+      line-height: 1.5;
+      outline: none;
+      text-align: center;
+      transition: border-color 0.2s ease-in-out;
+      border: radius 0;
+      color: #b52037;
+      font-size: 2rem;
+      max-width: 98%;
+    }
 
-        <div class="bujian">
-          <div class="tubiao">
-            <a href="https://developer.mozilla.org/zh-CN/" target="_blank"
-              ><img
-                src="../images/th.png"
-                width="35px"
-                height="35px"
-                alt="GitHub"
-            /></a>
-          </div>
-          <div>MDN</div>
-        </div>
+    #anNiu {
+      margin-left: -50px;
+      margin-right: 10px;
+      color: #ccc;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
 
-        <div class="bujian">
-          <div class="tubiao">
-            <a href="https://www.bilibili.com/" target="_blank"
-              ><img
-                src="../images/bilibili-01.png"
-                width="38px"
-                height="38px"
-                alt="GitHub"
-            /></a>
-          </div>
-          <div>bilibili</div>
-        </div>
+    input::placeholder {
+      color: #ccc;
+    }
 
-        <div class="bujian">
-          <div class="tubiao">
-            <a href="https://www.runoob.com/" target="_blank"
-              ><img
-                src="../images/cainiao.png"
-                width="38px"
-                height="38px"
-                alt="GitHub"
-            /></a>
-          </div>
-          <div>菜鸟</div>
-        </div>
+    input::-webkit-input-placeholder {
+      color: #dfdddd;
+    }
 
-        <div class="bujian">
-          <div class="tubiao">
-            <a href="https://www.csdn.net/" target="_blank"
-              ><img
-                src="../images/CSDN.png"
-                width="38px"
-                height="38px"
-                alt="GitHub"
-            /></a>
-          </div>
-          <div>CSDN</div>
-        </div>
+    .time {
+      font-size: 70px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      top: 30px;
+    }
+
+    .search {
+      height: 40px;
+      width: 400px;
+      position: relative;
+      top: -200px;
+    }
+
+
+    div.search form {
+      width: 100%;
+      height: 100%;
+    }
+
+    div.search form input:nth-child(2) {
+      width: 400px;
+      height: 100%;
+      font-size: 16px;
+      text-indent: 40px;
+      border: none;
+      float: left;
+      border-radius: 20px;
+    }
+
+    .img {
+      position: absolute;
+      transform: translateX(-250px);
+      height: 20px;
+      left: 264px;
+      top: 11px;
+    }
+
+    .baise {
+      color: white;
+    }
+
+    .text {
+      opacity: 0.7;
+    }
+
+    .img {
+      filter: brightness(20%);
+      z-index: 999;
+    }
+
+    .kuaijie {
+      /* background-color: #b52037; */
+      width: 400px;
+      height: 200px;
+      margin-top: 12px;
+      padding: 12px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .zhenti {
+      font-weight: 550;
+      background-color: white;
+      width: 45px;
+      height: 43px;
+      border-radius: 20%;
+      margin-right: 40px;
+      opacity: 0.8;
+    }
+
+    img {
+      border-radius: 20%;
+      opacity: 0.99;
+    }
+
+    .minzi {
+      color: white;
+      width: 45px;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .zhenti:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="time"></div>
+  <div class="search">
+    <form action="https://www.baidu.com/s" target="_blank" method="get">
+      <img class="img" src="../images/搜索.png" alt="" />
+      <input class="text" type="text" name="condition" placeholder="搜索网页" />
+      <a href="#" class="se"></a>
+    </form>
+
+    <div class="kuaijie">
+
+      <div class="zhenti">
+        <a href="https://github.com/" target="_blank"><img src="../images/github-2.jpg" width="100%" height="100%"
+            alt="GitHub" /></a>
+        <div class="minzi">Github</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://www.w3cschool.cn/" target="_blank"><img src="../images/w3c.png" width="100%" height="100%"
+            alt="w3c" /></a>
+        <div class="minzi">W3C</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://developer.mozilla.org/zh-CN/" target="_blank"><img src="../images/th.png" width="100%"
+            height="100%" alt="MDN" /></a>
+        <div class="minzi">MDN</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://www.bilibili.com/" target="_blank"><img src="../images/bilibili-01.png" width="100%"
+            height="100%" alt="bilibili" /></a>
+        <div class="minzi">bilibili</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://www.runoob.com/" target="_blank"><img src="../images/cainiao.png" width="100%" height="100%"
+            alt="cainiao" /></a>
+        <div class="minzi">菜鸟教程</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://www.csdn.net/" target="_blank"><img src="../images/CSDN.png" width="100%" height="100%"
+            alt="csdn" /></a>
+        <div class="minzi">CSDN</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://www.midorg.com/" target="_blank"><img src="../images/yundao.png" width="100%" height="100%"
+            alt="yuandao" /></a>
+        <div class="minzi">元岛</div>
+      </div>
+
+      <div class="zhenti">
+        <a href="https://www.4399.com/" target="_blank"><img src="../images/4399.png" width="100%" height="100%"
+            alt="4399" /></a>
+        <div class="minzi">别点我</div>
       </div>
     </div>
-<!--     <div class="box">
-      <input placeholder="最重要的事？" id="shuRuKuang" />
-      <span id="anNiu" onclick="change()">√</span>
-    </div> -->
 
-    <script>
-      let text = document.querySelector(".text");
-      let sear = document.querySelector(".se");
-      function search() {
-        let textcontent = text.value;
-        // 在当前页面跳转
-        // location.href = "https://www.baidu.com/s?wd=" + textcontent;
 
-        // 打开一个新的窗口，跳转
-        window.open("https://www.baidu.com/s?wd=" + textcontent, "newWindow");
-      }
-    //   监听键盘事件，单击回车执行函数
-      document.addEventListener("keydown", function (event) {
-        if (event.keyCode === 13) {
-          search()
-        }
-      });
+  </div>
+  <!-- <div class="box">
+    <input placeholder="最重要的事？" id="shuRuKuang" />
+    <span id="anNiu" onclick="change()">√</span>
+  </div> -->
+</body>
 
-      let youShi = false;
-
-      function change() {
-        let anNiu = document.getElementById("anNiu");
-        let shuRuKuang = document.getElementById("shuRuKuang");
-
-        if (youShi) {
-          youShi = false;
-          anNiu.innerHTML = "√";
-          shuRuKuang.style.borderBottomColor = "#fff";
-          shuRuKuang.value = "";
-          shuRuKuang.readOnly = false;
-          window.localStorage.removeItem("shi");
-
-          // fetch("http://localhost:3000/", {
-          //   method: "DELETE",
-          // })
-          //   .then((res) => res.json())
-          //   .then((data) => {
-          //     console.log(data);
-          //   });
-        } else {
-          youShi = true;
-          anNiu.innerHTML = "×";
-          shuRuKuang.style.borderBottomColor = "transparent";
-          shuRuKuang.readOnly = true;
-          window.localStorage.setItem("shi", shuRuKuang.value);
-          alert("种一棵树最好的时间是十年前，其次是现在。加油！！少年！！");
-
-          // fetch("http://localhost:3000/" + shuRuKuang.value, {
-          //   method: "POST",
-          // })
-          //   .then((res) => res.json())
-          //   .then((data) => {
-          //     console.log(data);
-          //   });
-        }
-      }
-
-      // fatch("http://localhost:3000/", {
-      //   method: "GET",
-      // })
-      //   .then((response) => response.json())
-      //   .then((jsonData) => {
-      //     console.log(jsonData);
-      //     if (jsonData.data) {
-      //       document.getElementById("shuRuKuang").value = jsonData.data;
-      //       youShi = true;
-      //       anNiu.innerText = "×";
-      //       shuRuKuang.style.borderBottomColor = "transparent";
-      //       shuRuKuang.readOnly = true;
-      //     }
-      //   });
-
-      let data = window.localStorage.getItem("shi");
-      if (data) {
-        document.getElementById("shuRuKuang").value = data;
-        change();
-      }
-
-      function getTime() {
-        var date = new Date();
-        var hour = date.getHours(); //获取小时
-        hour = hour < 10 ? "0" + hour : hour;
-        var minute = date.getMinutes(); // 获取分
-        minute = minute < 10 ? "0" + minute : minute;
-        var seconds = date.getSeconds(); //获取秒
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-        return hour + ":" + minute + ":" + seconds;
-      }
-
-      setInterval(function () {
-        document.querySelector(".time").innerHTML = getTime();
-      }, 1000);
-    </script>
-  </body>
 </html>
